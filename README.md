@@ -63,17 +63,24 @@ To ensure system stability and strict nonce management, V1 utilizes a synchronou
 * **🤖 Telegram/Discord Integration**: Real-time alerts for trade execution and gas spikes.
 * **🔐 Vault Security**: Upgrade private key management to use AWS KMS or HashiCorp Vault for enterprise-grade security.
 
-* ## 📊 Backtest Performance (Simulation)
+## 🖥️ Live Sniper Dashboard
+The bot features a real-time CLI dashboard for monitoring price gaps, gas fees, and risk status.
 
-To validate the strategy, I ran simulations using the **Ornstein-Uhlenbeck (OU)** price model.
-The results demonstrate that the **PRO strategy** (with risk control & smart execution) significantly outperforms retail trading.
+> **Key Feature Highlight:** Note the **`[RISK BLOCKED]`** alert in the screenshot below. This demonstrates the **Automated Risk Management** module triggering a cool-down period to prevent over-trading during volatility.
 
-### 1. Execution Log
-Running the V6.0 engine with Event-Driven logic:
-![Terminal Run](terminal_run.png)
+![CLI Dashboard](cli_dashboard.png)
 
-### 2. Cumulative Profit Curve
-Comparing Retail vs. Pro strategies over 150 trade sequences:
-![Profit Chart](profit_chart.png)
+---
 
-> **Note:** These are backtest results based on historical liquidity snapshots.
+## 📊 Performance Backtest (Simulation)
+
+I validated the **Ornstein-Uhlenbeck (OU)** strategy against Retail logic over 120 trade sequences.
+
+### 1. Cumulative Profit Curve
+**PRO Strategy (Green)** vs. Retail Strategy (Blue).
+The Pro strategy stabilizes profits by filtering low-quality signals and avoiding front-running.
+![Profit Curve](profit_curve.png)
+
+### 2. Execution Metrics
+Comparison of Win Rate and Net Profit between Retail, Semi-Pro, and Pro modes.
+![Metrics](performance_metrics.png)
