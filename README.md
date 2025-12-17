@@ -83,4 +83,4 @@ The Pro strategy stabilizes profits by filtering low-quality signals and avoidin
 
 ### 2. Execution Metrics
 Comparison of Win Rate and Net Profit between Retail, Semi-Pro, and Pro modes.
-![Metrics](performance_metrics.png)
+![Metrics](terminal_run.png)
