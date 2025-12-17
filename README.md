@@ -35,11 +35,13 @@ A production-grade, event-driven arbitrage bot designed for **Polymarket** on th
     ```
 
 3.  **Configure Environment**
-    Create a `.env` file and add your private key:
-    ```ini
-    PRIVATE_KEY=0xYourPrivateKey...
-    POLYGON_RPC=[https://polygon-rpc.com](https://polygon-rpc.com)
+    Copy the example configuration file:
+    ```bash
+    cp .env.example .env
     ```
+    Then edit `.env` to add your **testnet/burner wallet** credentials.
+    
+    > **⚠️ Security Note:** The project is configured to ignore the `.env` file to prevent accidental leakage. Please ensure you are using a **virtual/testing private key** with limited funds, not your primary storage wallet.
 
 4.  **Run Sniper Mode (Dry Run)**
     ```bash
@@ -49,3 +51,14 @@ A production-grade, event-driven arbitrage bot designed for **Polymarket** on th
 ## ⚠️ Disclaimer
 
 This software is for educational purposes only. Cryptocurrency trading involves high risk. Use at your own risk.
+
+## 🗺️ Roadmap (V2.0 Development Plan)
+
+Current Status: **Stable V1.0 (Single-Market Focus)**
+
+To ensure system stability and strict nonce management, V1 utilizes a synchronous architecture. The following features are architected for the upcoming V2 release:
+
+* **⚡️ Asyncio Concurrency Engine**: Migrate from `requests` to `aiohttp` to support monitoring 50+ markets simultaneously without blocking.
+* **🔄 Auto-Redemption Module**: Integrate with Conditional Token Framework (CTF) to automatically redeem winning shares after market resolution.
+* **🤖 Telegram/Discord Integration**: Real-time alerts for trade execution and gas spikes.
+* **🔐 Vault Security**: Upgrade private key management to use AWS KMS or HashiCorp Vault for enterprise-grade security.
