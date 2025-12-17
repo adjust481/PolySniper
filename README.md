@@ -62,3 +62,18 @@ To ensure system stability and strict nonce management, V1 utilizes a synchronou
 * **🔄 Auto-Redemption Module**: Integrate with Conditional Token Framework (CTF) to automatically redeem winning shares after market resolution.
 * **🤖 Telegram/Discord Integration**: Real-time alerts for trade execution and gas spikes.
 * **🔐 Vault Security**: Upgrade private key management to use AWS KMS or HashiCorp Vault for enterprise-grade security.
+
+* ## 📊 Backtest Performance (Simulation)
+
+To validate the strategy, I ran simulations using the **Ornstein-Uhlenbeck (OU)** price model.
+The results demonstrate that the **PRO strategy** (with risk control & smart execution) significantly outperforms retail trading.
+
+### 1. Execution Log
+Running the V6.0 engine with Event-Driven logic:
+![Terminal Run](terminal_run.png)
+
+### 2. Cumulative Profit Curve
+Comparing Retail vs. Pro strategies over 150 trade sequences:
+![Profit Chart](profit_chart.png)
+
+> **Note:** These are backtest results based on historical liquidity snapshots.
