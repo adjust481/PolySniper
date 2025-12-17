@@ -79,7 +79,7 @@ I validated the **Ornstein-Uhlenbeck (OU)** strategy against Retail logic over 1
 ### 1. Cumulative Profit Curve
 **PRO Strategy (Green)** vs. Retail Strategy (Blue).
 The Pro strategy stabilizes profits by filtering low-quality signals and avoiding front-running.
-![Profit Curve](profit_curve.png)
+![Profit Curve](profit_chart.png)
 
 ### 2. Execution Metrics
 Comparison of Win Rate and Net Profit between Retail, Semi-Pro, and Pro modes.
